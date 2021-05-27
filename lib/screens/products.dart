@@ -130,52 +130,46 @@ class _ProductsPageState extends State<ProductsPage> {
             ),
             title: Text("Продукция")),
         body: TabBarView(
+          
           children: [
-            Container(
-              child: FutureBuilder<List<dynamic>>(
-                future: Mysql.getProductsByCategoryIndex(0),
-                builder: (BuildContext context, AsyncSnapshot snapshot) {
-                  if (snapshot.data == null) {
-                    return Container(
-                      child: Center(
-                        child: Text("Loading..."),
-                      ),
-                    );
-                  } else {
-                    return ListView.builder(
-                      itemCount: snapshot.data.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          title: Text(snapshot.data[index].name),
-                        );
-                      },
-                    );
-                  }
-                },
-              ),
-            ),
-
-            Text("Dummy"),
-            Text("Dummy"),
-            Text("Dummy"),
-            Text("Dummy"),
-            Text("Dummy"),
-            Text("Dummy"),
-            Text("Dummy"),
-            // ProductsTab(products[0]),
-            // ProductsTab(products[1]),
-            // ProductsTab(products[2]),
-            // ProductsTab(products[3]),
-            // ProductsTab(products[4]),
-            // ProductsTab(products[5]),
-            // ProductsTab(products[6]),
-            // ProductsTab(products[7]),
+            ProductsTab(0),
+            ProductsTab(1),
+            ProductsTab(2),
+            ProductsTab(3),
+            ProductsTab(4),
+            ProductsTab(5),
+            ProductsTab(6),
+            ProductsTab(7),
           ],
         ),
       ),
     );
   }
 }
+
+// Container(
+//   child: FutureBuilder<List<dynamic>>(
+//     future: Mysql.getProductsByCategoryIndex(0),
+//     builder: (BuildContext context, AsyncSnapshot snapshot) {
+//       if (snapshot.data == null) {
+//         return Container(
+//           child: Center(
+//             child: Text("Loading..."),
+//           ),
+//         );
+//       } else {
+//         return ListView.builder(
+//           itemCount: snapshot.data.length,
+//           itemBuilder: (BuildContext context, int index) {
+//             return ListTile(
+//               title: Text(snapshot.data[index].name),
+//             );
+//           },
+//         );
+//       }
+//     },
+//   ),
+// ),
 
 // class ProductsPage extends StatelessWidget {
 //   final List<String> products = [];

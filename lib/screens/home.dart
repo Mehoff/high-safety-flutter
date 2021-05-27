@@ -1,12 +1,9 @@
-// import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_application/screens/contacts.dart';
 import 'package:flutter_shop_application/screens/products.dart';
-import '../screens/sqlTest.dart';
 import '../components/widgets.dart';
-
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -61,15 +58,6 @@ class MyHomePage extends StatelessWidget {
                                   builder: (context) => ContactsPage()));
                         },
                       ),
-                      HomeButton(
-                        buttonText: "DB TEST",
-                        onClickFunction: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SqlDataPage()));
-                        },
-                      )
                     ],
                   ),
                 )
