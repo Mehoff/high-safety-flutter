@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// Статический класс который возвращает стили
+
 class ProductTextStyle {
   static TextStyle h1(BuildContext context) {
     return TextStyle(

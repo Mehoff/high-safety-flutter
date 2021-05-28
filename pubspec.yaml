@@ -20,6 +20,8 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
+
+# Тут подключаются зависимости, пакеты, библиотеки или как ты любишь их называть, у нас только mysql1
 dependencies:
   flutter:
     sdk: flutter
@@ -42,6 +44,7 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+  # Тут подключили ассеты картинок и иконок
   assets:
     - assets/images/
     - assets/icons/

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+// Виджет бэкграунда
+// Тут я по гайду в инете сделал эффект градиента-затемнения в виде шейдера
+// Тут чёрт ногу сломит, так что не буду углубляться в год, по сути просто декорация
+
 class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
